@@ -15,6 +15,8 @@ public class PostCommand implements Command {
 		this.linkRepository = linkRepository;
 	}
 
+	// TODO 14. Ewan and Sebastian mentioned that we have a saveIfNotExist method
+	//
 	public String execute(String username, String argument, Calendar timeOfExecution) {
 		messageRepository.saveIfNotExist(username);
 		linkRepository.saveIfNotExist(username);
